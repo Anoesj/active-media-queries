@@ -1,0 +1,21 @@
+$desktop: 1000px;
+
+$mq-tablet: (max-width: #{$desktop});
+$mq-desktop: (min-width: #{$desktop});
+
+// Set breakpoints CSS variable
+:root {
+  --media-queries: '{ "tablet": "#{$mq-tablet}", "desktop": "#{$mq-desktop}" }';
+}
+
+@media #{$mq-tablet} {
+  html {
+    background-color: red;
+  }
+}
+
+@media #{$mq-desktop} {
+  html {
+    background-color: blue;
+  }
+}

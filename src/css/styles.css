@@ -1,0 +1,10 @@
+:root {
+  --media-queries: '{ "tablet": "(max-width: 1000px)", "desktop": "(min-width: 1000px)" }'; }
+
+@media (max-width: 1000px) {
+  html {
+    background-color: red; } }
+
+@media (min-width: 1000px) {
+  html {
+    background-color: blue; } }

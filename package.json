@@ -1,0 +1,20 @@
+{
+  "name": "active-media-queries",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.html",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "browser-sync-ui": "^1.0.1",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-glob": "^1.0.9",
+    "require-dir": "^1.0.0"
+  },
+  "dependencies": {
+    "gulp-cli": "^2.0.1"
+  },
+  "author": "Anoesj Sadraee",
+  "license": "ISC"
+}

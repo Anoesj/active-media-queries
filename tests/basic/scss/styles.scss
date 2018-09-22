@@ -1,0 +1,33 @@
+$tablet: 600px;
+$desktop: 1000px;
+
+@function bpmax($bp) {
+  @return $bp - 1px;
+}
+
+$mq-mobile: "(max-width: #{bpmax($tablet)})";
+$mq-tablet: "(min-width: #{$tablet}) and (max-width: #{bpmax($desktop)})";
+$mq-desktop: "(min-width: #{$desktop})";
+
+// Set breakpoints CSS variable
+:root {
+  --media-queries: '{ "mobile": "#{$mq-mobile}", "tablet": "#{$mq-tablet}", "desktop": "#{$mq-desktop}" }';
+}
+
+@media #{$mq-mobile} {
+  html {
+    background-color: green;
+  }
+}
+
+@media #{$mq-tablet} {
+  html {
+    background-color: red;
+  }
+}
+
+@media #{$mq-desktop} {
+  html {
+    background-color: blue;
+  }
+}

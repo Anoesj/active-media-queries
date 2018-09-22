@@ -1,0 +1,14 @@
+:root {
+  --media-queries: '{ "mobile": "(max-width: 599px)", "tablet": "(min-width: 600px) and (max-width: 999px)", "desktop": "(min-width: 1000px)" }'; }
+
+@media (max-width: 599px) {
+  html {
+    background-color: green; } }
+
+@media (min-width: 600px) and (max-width: 999px) {
+  html {
+    background-color: red; } }
+
+@media (min-width: 1000px) {
+  html {
+    background-color: blue; } }

@@ -11,7 +11,7 @@ $mq-desktop: "(min-width: #{$desktop})";
 
 // Set breakpoints CSS variable
 :root {
-  --media-queries: '{ "mobile": "#{$mq-mobile}", "tablet": "#{$mq-tablet}", "desktop": "#{$mq-desktop}" }';
+  --media-queries: "{ 'mobile': '#{$mq-mobile}', 'tablet': '#{$mq-tablet}', 'desktop': '#{$mq-desktop}' }";
 }
 
 @media #{$mq-mobile} {

@@ -22,4 +22,4 @@ requireDir('./gulp-tasks/processes', { recurse: false });
 // Workflows, like build/deploy/test/serve
 requireDir('./gulp-tasks/workflows', { recurse: false });
 
-gulp.task('default', gulp.series('test-basic'));
+gulp.task('default', gulp.series('examples-basic'));

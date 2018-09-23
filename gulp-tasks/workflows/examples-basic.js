@@ -4,7 +4,7 @@ const gulp = require('gulp'),
       sassGlob = require('gulp-sass-glob'),
       basePath = global.paths.tests + '/basic';
 
-gulp.task('test-basic-css', () => {
+gulp.task('examples-basic-css', () => {
   return gulp.src(basePath + '/scss/**/*.scss', { sourcemaps: true })
     .pipe(sassGlob())
     .pipe(sass())
@@ -17,18 +17,18 @@ gulp.task('test-basic-css', () => {
     .pipe(global.browserSync.stream());
 });
 
-gulp.task('test-basic-watch', () => {
+gulp.task('examples-basic-watch', () => {
   global.browserSync.init({
     server: {
       baseDir: './',
-      index: '/tests/basic/index.html'
+      index: '/examples/basic/index.html'
     },
     ghostMode: false
   });
 
   const config = { interval: 50 };
   gulp.watch([basePath + '/**/*.html', basePath + '/**/*.js'], config).on('change', global.browserSync.reload);
-  gulp.watch(basePath + '/**/*.scss', config, gulp.series('test-basic-css'));
+  gulp.watch(basePath + '/**/*.scss', config, gulp.series('examples-basic-css'));
 });
 
-gulp.task('test-basic', gulp.series('test-basic-css', 'test-basic-watch'));
+gulp.task('examples-basic', gulp.series('examples-basic-css', 'examples-basic-watch'));

@@ -1,10 +1,37 @@
 # Active media queries
 
+## Status: <span style="color:red">unmaintained</span>, usage not recommended.
+There are better (native) alternatives available. Instead of using this package, try:
+```javascript
+const mediaQuery = '(max-width: 600px)';
+// Modern browsers:
+window.matchMedia(mediaQuery).addEventListener('change', (event) => {
+  if (event.matches) {
+    // do things
+  }
+  else {
+    // do other things
+  }
+});
+// Older browsers:
+window.matchMedia(mediaQuery).addListener((event) => {
+  if (event.matches) {
+    // do things
+  }
+  else {
+    // do other things
+  }
+});
+```
+More info: https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/
+
+-----------------------
+
 ## Installation:
-- `npm i`
+- `pnpm i`
 
 ## Examples:
-- run `gulp examples-basic`
+- run `pnpx gulp examples-basic`
 
 ## Minimum browser requirements:
 - CSS variables

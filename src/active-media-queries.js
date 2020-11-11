@@ -8,7 +8,7 @@
       const mediaQueriesCSSVariable = getComputedStyle(document.body).getPropertyValue('--media-queries');
       const mediaQueriesString = mediaQueriesCSSVariable.substring(2).slice(0, -1).replace(/'/g, '"');
       const mediaQueries = JSON.parse(mediaQueriesString);
-      
+
       for (const [name, mediaQuery] of Object.entries(mediaQueries)) {
         this.mediaQueries.set(name, {
           name: name,
@@ -61,7 +61,7 @@
       if (eventName === 'mq-change') {
         const newlyActiveMediaQueries = new Map(),
               newlyInactiveMediaQueries = new Map();
-        
+
         for (const [name, mediaQueryObj] of changedMediaQueries) {
           if (mediaQueryObj.active === true) {
             newlyActiveMediaQueries.set(name, mediaQueryObj);
@@ -70,7 +70,7 @@
             newlyInactiveMediaQueries.set(name, mediaQueryObj);
           }
         }
-        
+
         if (newlyActiveMediaQueries.size) this.dispatchCustomEvent('mq-active', newlyActiveMediaQueries);
         if (newlyInactiveMediaQueries.size) this.dispatchCustomEvent('mq-inactive', newlyInactiveMediaQueries);
       }
@@ -103,7 +103,7 @@
     return function () {
       const context = this,
             args = arguments;
-      
+
       if (!lastRan) {
         func.apply(context, args);
         lastRan = Date.now();
